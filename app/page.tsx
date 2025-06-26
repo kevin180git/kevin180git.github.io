@@ -49,9 +49,8 @@ export default function Portfolio() {
             <img
               src="/images/ghibli-landscape.png"
               alt="Serene Ghibli-style landscape"
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover opacity-50"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/95"></div>
           </div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">

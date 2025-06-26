@@ -112,11 +112,88 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  :root {
+    /* Earth-tone dark theme colors */
+    --background: 26 22 18; /* #1a1612 - Deep warm brown */
+    --foreground: 244 241 235; /* #f4f1eb - Warm cream */
+    --card: 33 30 25; /* #211e19 - Warm dark brown for cards */
+    --card-foreground: 244 241 235; /* #f4f1eb - Cream text */
+    --popover: 31 28 23; /* #1f1c17 - Slightly lighter brown */
+    --popover-foreground: 244 241 235; /* #f4f1eb - Cream text */
+    --primary: 230 179 102; /* #e6b366 - Warm amber */
+    --primary-foreground: 26 22 18; /* #1a1612 - Dark brown text */
+    --secondary: 45 37 32; /* #2d2520 - Medium warm brown */
+    --secondary-foreground: 232 221 208; /* #e8ddd0 - Light cream */
+    --muted: 37 32 23; /* #252017 - Muted brown */
+    --muted-foreground: 166 155 138; /* #a69b8a - Muted sand */
+    --accent: 58 48 37; /* #3a3025 - Accent brown */
+    --accent-foreground: 212 196 176; /* #d4c4b0 - Light sand */
+    --destructive: 212 132 90; /* #d4845a - Terracotta */
+    --destructive-foreground: 244 241 235; /* #f4f1eb - Cream text */
+    --border: 230 179 102; /* #e6b366 - Amber borders */
+    --input: 58 48 37; /* #3a3025 - Input background */
+    --ring: 230 179 102; /* #e6b366 - Focus ring amber */
+    --radius: 0.5rem;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+}
+
+/* Ensure proper styling */
+* {
+  border-color: hsl(var(--border) / 0.2);
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom earth-tone utilities */
+.text-amber {
+  color: #e6b366;
+}
+
+.text-sand {
+  color: #b8a082;
+}
+
+.text-cream {
+  color: #f4f1eb;
+}
+
+.text-sage {
+  color: #7a8471;
+}
+
+.text-teal {
+  color: #4a9b8e;
+}
+
+.text-terracotta {
+  color: #d4845a;
+}
+
+.bg-terracotta {
+  background-color: #d4845a;
+}
+
+.border-amber {
+  border-color: #e6b366;
+}
+
+.hover\:bg-amber\/20:hover {
+  background-color: rgb(230 179 102 / 0.2);
+}
+
+.hover\:text-amber:hover {
+  color: #e6b366;
+}
+
+.hover\:border-amber\/40:hover {
+  border-color: rgb(230 179 102 / 0.4);
 }
