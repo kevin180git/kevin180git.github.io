@@ -183,35 +183,35 @@ export function NorthernLights() {
         ctx.fill()
       }
 
-      // Add taller vertical aurora curtains with better blending
-      for (let curtain = 0; curtain < 6; curtain++) {
-        const x = (canvas.width / 7) * (curtain + 1) + Math.sin(time * 0.0005 + curtain) * 80
-        const curtainHeight = canvas.height * 0.6 // Much taller curtains
-        const curtainGradient = ctx.createLinearGradient(
-          x - 40,
-          centerY - curtainHeight / 2,
-          x + 40,
-          centerY + curtainHeight / 2,
-        )
+    //   // Add taller vertical aurora curtains with better blending
+    //   for (let curtain = 0; curtain < 6; curtain++) {
+    //     const x = (canvas.width / 7) * (curtain + 1) + Math.sin(time * 0.0005 + curtain) * 80
+    //     const curtainHeight = canvas.height * 0.6 // Much taller curtains
+    //     const curtainGradient = ctx.createLinearGradient(
+    //       x - 40,
+    //       centerY - curtainHeight / 2,
+    //       x + 40,
+    //       centerY + curtainHeight / 2,
+    //     )
 
-        const curtainIntensity = (Math.sin(time * 0.0007 + (curtain * Math.PI) / 3) * 0.3 + 0.4) * lightsOpacity * 0.2
+    //     const curtainIntensity = (Math.sin(time * 0.0007 + (curtain * Math.PI) / 3) * 0.3 + 0.4) * lightsOpacity * 0.2
 
-        curtainGradient.addColorStop(0, `rgba(34, 197, 94, 0)`)
-        curtainGradient.addColorStop(0.2, `rgba(34, 197, 94, ${curtainIntensity * 0.3})`)
-        curtainGradient.addColorStop(0.4, `rgba(34, 197, 94, ${curtainIntensity * 0.8})`)
-        curtainGradient.addColorStop(0.6, `rgba(16, 185, 129, ${curtainIntensity})`)
-        curtainGradient.addColorStop(0.8, `rgba(34, 197, 94, ${curtainIntensity * 0.6})`)
-        curtainGradient.addColorStop(1, `rgba(34, 197, 94, 0)`)
+    //     curtainGradient.addColorStop(0, `rgba(34, 197, 94, 0)`)
+    //     curtainGradient.addColorStop(0.2, `rgba(34, 197, 94, ${curtainIntensity * 0.3})`)
+    //     curtainGradient.addColorStop(0.4, `rgba(34, 197, 94, ${curtainIntensity * 0.8})`)
+    //     curtainGradient.addColorStop(0.6, `rgba(16, 185, 129, ${curtainIntensity})`)
+    //     curtainGradient.addColorStop(0.8, `rgba(34, 197, 94, ${curtainIntensity * 0.6})`)
+    //     curtainGradient.addColorStop(1, `rgba(34, 197, 94, 0)`)
 
-        // Create a radial gradient for width blending
-        const curtainRadial = ctx.createRadialGradient(x, centerY, 0, x, centerY, 60)
-        curtainRadial.addColorStop(0, `rgba(34, 197, 94, ${curtainIntensity})`)
-        curtainRadial.addColorStop(0.7, `rgba(16, 185, 129, ${curtainIntensity * 0.6})`)
-        curtainRadial.addColorStop(1, `rgba(34, 197, 94, 0)`)
+    //     // Create a radial gradient for width blending
+    //     const curtainRadial = ctx.createRadialGradient(x, centerY, 0, x, centerY, 60)
+    //     curtainRadial.addColorStop(0, `rgba(34, 197, 94, ${curtainIntensity})`)
+    //     curtainRadial.addColorStop(0.7, `rgba(16, 185, 129, ${curtainIntensity * 0.6})`)
+    //     curtainRadial.addColorStop(1, `rgba(34, 197, 94, 0)`)
 
-        ctx.fillStyle = curtainRadial
-        ctx.fillRect(x - 60, centerY - curtainHeight / 2, 120, curtainHeight)
-      }
+    //     ctx.fillStyle = curtainRadial
+    //     ctx.fillRect(x - 60, centerY - curtainHeight / 2, 120, curtainHeight)
+    //   }
 
       // Add subtle atmospheric glow at the edges for better blending
       const edgeGradientTop = ctx.createLinearGradient(0, 0, 0, canvas.height * 0.3)
@@ -277,7 +277,7 @@ export function NorthernLights() {
     const animate = (time: number) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    //   drawNorthernLights(time)
+      drawNorthernLights(time)
       drawStars(time)
       createShootingStar()
       drawShootingStars()
