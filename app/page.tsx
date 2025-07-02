@@ -322,7 +322,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <p className="text-muted-foreground">GPA: 3.62/4.0 • Dean's List</p>
+                    <p className="text-muted-foreground">GPA: 3.62/4.0</p>
                     <p className="text-muted-foreground">
                       <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Systems, Video Game Design, Computer Networking, Cybersecurity
                     </p>
