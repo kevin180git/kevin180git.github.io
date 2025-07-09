@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone } from "lucide-react"
+import { Github, Linkedin, ExternalLink, Code, Database, Globe, Smartphone } from "lucide-react"
 import { ScrollBackground } from "@/components/scroll-background"
 import { NorthernLights } from "@/components/northern-lights"
 
