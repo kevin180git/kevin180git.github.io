@@ -288,7 +288,7 @@ export default function Portfolio() {
                     </div>
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Personally hobby game project, modeled after my friends' cats.
+                    Personally hobby game project, modeled after my friends cats.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
