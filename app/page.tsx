@@ -63,15 +63,24 @@ export default function Portfolio() {
                 ownership of complex systems and apps in the enterprise space.
               </p>
               <div className="flex justify-center gap-4">
-                <Button variant="ghost" size="icon" className="hover:bg-amber/20 text-white hover:text-amber">
-                  <Github className="w-5 h-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover:bg-amber/20 text-white hover:text-amber">
-                  <Linkedin className="w-5 h-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover:bg-amber/20 text-white hover:text-amber">
-                  <Mail className="w-5 h-5" />
-                </Button>
+                <a
+                href="https://github.com/kevin180git/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                    <Button variant="ghost" size="icon" className="hover:bg-amber/20 text-white hover:text-amber">
+                    <Github className="w-5 h-5" />
+                    </Button>
+                </a>
+                <a
+                href="https://www.linkedin.com/in/klee0805"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                    <Button variant="ghost" size="icon" className="hover:bg-amber/20 text-white hover:text-amber">
+                        <Linkedin className="w-5 h-5" />
+                    </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -231,8 +240,7 @@ export default function Portfolio() {
                     </div>
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Collaborative project management tool with real-time updates, drag-and-drop functionality, and team
-                    collaboration features.
+                    Fitness tracking app with social features, allowing users to create and join challenges, track workouts, and share progress.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -261,7 +269,7 @@ export default function Portfolio() {
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                   <CardTitle className="flex items-center justify-between text-cream">
-                    Weather Analytics Dashboard
+                    Untitled cat game
                     <div className="flex gap-2">
                       <Button
                         variant="ghost"
@@ -280,8 +288,7 @@ export default function Portfolio() {
                     </div>
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Data visualization dashboard displaying weather patterns and analytics with interactive charts and
-                    maps.
+                    Personally hobby game project, modeled after my friends' cats.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
