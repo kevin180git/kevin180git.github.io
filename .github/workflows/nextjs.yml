@@ -72,10 +72,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Clean old dependencies
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
-          rm -f yarn.lock
+        run: rm -rf node_modules
+      - name: Install dependencies delete after this one time
+        run: npm install
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Fix CICD error
