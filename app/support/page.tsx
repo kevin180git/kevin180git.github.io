@@ -64,7 +64,10 @@ export default function SupportPage() {
                 </CardHeader>
                 <CardContent>
                   <Button asChild>
-                    <Link href="#">
+                    <Link href="https://nervoushippo.com/tetdokuSupport/support.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Visit Tetdoku Support Page">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Visit Tetdoku Support
                     </Link>

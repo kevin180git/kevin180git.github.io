@@ -19,7 +19,7 @@ export default function LegalPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
@@ -50,21 +50,6 @@ export default function LegalPage() {
               <CardContent>
                 <Button asChild className="w-full">
                   <Link href="/legal/privacy">View Privacy Policy</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Smartphone className="h-5 w-5 text-destructive" />
-                  <span>Tetdoku Privacy</span>
-                </CardTitle>
-                <CardDescription>Specific privacy policy for the Tetdoku mobile game application.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button asChild className="w-full">
-                  <Link href="/legal/tetdoku-privacy">View Tetdoku Privacy Policy</Link>
                 </Button>
               </CardContent>
             </Card>

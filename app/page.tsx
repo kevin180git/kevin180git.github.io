@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Download, Smartphone, Star, Zap } from "lucide-react"
+import { Download, Star } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -31,41 +31,6 @@ export default function HomePage() {
             <p className="text-xl sm:text-3xl lg:text-4xl text-white/90 mb-4 text-pretty font-light drop-shadow-lg">
               Casual mobile games with a twist.
             </p>
-
-            <p className="text-base sm:text-lg text-white/80 mb-12 max-w-2xl mx-auto text-pretty drop-shadow-md">
-              Discover innovative puzzle experiences that challenge your mind while keeping you relaxed. Available now
-              on iOS and Android.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto px-8 py-4 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-300 backdrop-blur-sm"
-                asChild
-              >
-                <Link href="#tetdoku">
-                  <Smartphone className="mr-3 h-6 w-6" />
-                  Download on App Store
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto px-8 py-4 text-lg font-semibold bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-xl"
-                asChild
-              >
-                <Link href="#tetdoku">
-                  <Download className="mr-3 h-6 w-6" />
-                  Get it on Google Play
-                </Link>
-              </Button>
-            </div>
-
-            <div className="animate-bounce">
-              <div className="w-6 h-10 border-2 border-white/50 rounded-full mx-auto flex justify-center backdrop-blur-sm">
-                <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -85,10 +50,11 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-border/50">
                 <div className="text-center">
-                  <div className="w-32 h-32 bg-primary/20 rounded-xl mb-4 mx-auto flex items-center justify-center">
-                    <Zap className="h-16 w-16 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground">Game Preview</p>
+                    <img
+                      src="/images/tetdoku.png"
+                      alt="Tetdoku Game Preview"
+                      className="object-contain w-full h-full"
+                    />                  
                 </div>
               </div>
             </div>
@@ -134,13 +100,21 @@ export default function HomePage() {
               <div className="pt-4">
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button className="flex-1" asChild>
-                    <Link href="#">
+                    <Link 
+                      href="https://apps.apple.com/us/app/tetdoku/id6748969433"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="View on the App Store">
                       <Download className="mr-2 h-4 w-4" />
                       App Store
                     </Link>
                   </Button>
                   <Button variant="outline" className="flex-1 bg-transparent" asChild>
-                    <Link href="#">
+                    <Link 
+                      href="https://play.google.com/store/apps/details?id=com.nervoushippo.tetdoku&hl=en_US"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="View on Google Play">
                       <Download className="mr-2 h-4 w-4" />
                       Google Play
                     </Link>

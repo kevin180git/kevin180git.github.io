@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Download, Star, Zap } from "lucide-react"
+import { Download, Star } from "lucide-react"
 import Link from "next/link"
 
 export default function GamesPage() {
@@ -23,7 +23,11 @@ export default function GamesPage() {
             {/* Tetdoku Game Card */}
             <Card className="overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <Zap className="h-16 w-16 text-primary" />
+                <img
+                      src="/images/tetdoku.png"
+                      alt="Tetdoku Game Preview"
+                      className="object-contain w-full h-full"
+                    />  
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">Tetdoku</CardTitle>
