@@ -48,15 +48,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Game Preview */}
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-border/50">
-                <div className="text-center">
-                    <img
-                      src="/images/tetdoku.png"
-                      alt="Tetdoku Game Preview"
-                      className="object-contain w-full h-full"
-                    />                  
+              <Link 
+                href="https://nervoushippo.com/tetdokuSupport/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity duration-200"
+              >
+                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-border/50">
+                  <div className="text-center">
+                      <img
+                        src="/images/tetdokuPlain.png"
+                        alt="Tetdoku Game Preview"
+                        className="object-contain w-full h-full"
+                      />                  
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Game Features */}
@@ -99,26 +106,30 @@ export default function HomePage() {
 
               <div className="pt-4">
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="flex-1" asChild>
-                    <Link 
-                      href="https://apps.apple.com/us/app/tetdoku/id6748969433"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="View on the App Store">
-                      <Download className="mr-2 h-4 w-4" />
-                      App Store
-                    </Link>
-                  </Button>
-                  <Button variant="outline" className="flex-1 bg-transparent" asChild>
-                    <Link 
-                      href="https://play.google.com/store/apps/details?id=com.nervoushippo.tetdoku&hl=en_US"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="View on Google Play">
-                      <Download className="mr-2 h-4 w-4" />
-                      Google Play
-                    </Link>
-                  </Button>
+                  <Link 
+                    href="https://apps.apple.com/us/app/tetdoku/id6748969433"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View on the App Store"
+                    className="flex-1">
+                    <img 
+                      src="/appStore.svg" 
+                      alt="Download on the App Store"
+                      className="h-12 w-auto mx-auto"
+                    />
+                  </Link>
+                  <Link 
+                    href="https://play.google.com/store/apps/details?id=com.nervoushippo.tetdoku&hl=en_US"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View on Google Play"
+                    className="flex-1">
+                    <img 
+                      src="/googlePlay.png" 
+                      alt="Get it on Google Play"
+                      className="h-12 w-auto mx-auto"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
